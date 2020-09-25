@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style>
+@keyframes example {
+  0%   {background-color:pink;}
+  15%  {background-color: grey;}
+30%  {background-color: Violet;}
+45%  {background-color: PeachPuff;}
+60%  {background-color: MediumOrchid;}
+  75%  {background-color: Turquoise;}
+  90%  {background-color: Sienna;}
+  100% {background-color: GreenYellow;}
+}
+
+header{
+ color:Black;
+text-align:center;
+background-color:#A9A9A9;
+padding: 30px;
+ animation-name: example;
+  animation-duration: 50s;
+}
+footer{
+background-color:#A9A9A9;
+padding: 20px;
+animation-name: example;
+animation-duration: 50s;
+}
+
+.input{
+text-align:center; 
+width:100%;
+}
+.form-input{
+text-align:center;
+}
+.github{
+width:40px;
+height:40px;
+align:center;
+}
+.linkedin{
+width:40px;
+height:40px;
+align:center;
+}
+
+</style>
+</head>
+
+<body>
+<header>
+    <h1>CONCRETE COMPRESSIVE STRENGTH</h1>
+</header>
+<br>
+<br>
+
+
+
+
+
+<div class="input">
+
+
+<img src="https://cdn.dribbble.com/users/891406/screenshots/2146143/city1.gif" alt="Gif" >
+
+<h3 style="text-align:center";>Please Enter Values:</h3>
+
+<!-- Text Area -->
+<form action="{{ url_for('predict') }}" method="POST" >
+           <b> Cement:  <input class="form-input" type="text", name='cement', placeholder="Enter cement in kg"> <br><br>
+            blast_furnace_slag :  <input class="form-input"type="text", name='blast_furnace_slag', placeholder="blast_furnace_slag in kg"> <br><br>
+            fly_ash:  <input class="form-input"type="text", name='fly_ash', placeholder="fly_ash"> <br><br>
+            water:  <input class="form-input" type="text", name='water', placeholder="water"> <br><br>
+            superplasticizer:  <input class="form-input" type="text", name='superplasticizer', placeholder="superplasticizer"> <br><br>
+            coarse_aggregate:  <input class="form-input" type="text", name='coarse_aggregate', placeholder="coarse_aggregate"> <br><br>
+            fine_aggregate: <input class="form-input" type="text", name='fine_aggregate', placeholder="fine_aggregate"> <br><br>
+            age: <input class="form-input" type="text", name='age', placeholder="age"> <br><br>
+           </b>
+            <input type="submit" , value='predict!' >
+        </form>
+<br>
+<br>
+</div>
+
+<!-- Footer -->
+
+<footer>
+<center>
+<a href="https://github.com/Venukiran004/concrete_strength" >
+<img class="github" src="https://image.freepik.com/free-icon/github-logo_318-53553.jpg" alt="github">
+</a>
+<a href="https://www.linkedin.com/in/venukiran-sankar-6b6b8b96/">
+<img class="linkedin" src="http://encomium.ng/wp-content/uploads/2016/01/LinkedIn-Logo.png" alt="linkedin">
+</center>
+</footer>
+     
+</body>
